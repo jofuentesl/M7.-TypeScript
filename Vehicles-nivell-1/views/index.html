@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!--Vinculem amb CDN Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!--Vinculem amb jquery validation-->
+    
+    <link href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js">
+    
+    <!--Vinculem amb fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+    <!--Vinculem fulla d'estils-->
+    <link rel="stylesheet" href="../styles/style.css">
+    
+    </head>
+    <body class="h-100">
+      <div class="container h-100">
+          <div class="row justify-content-center h-100">
+              <div class="col-10 align-self-center">
+                  <h2 class="text-center" id="maintitle">Construeix el teu cotxe</h2>
+                  <form id="carForm">
+                    <div class="d-flex flex-row">
+                      <div class="m-3">
+                        <label for="matricula" class="form-label">Matricula</label>
+                        <input type="text" class="form-control" id="matricula" placeholder="Introdueix la matrícula">
+                        <div id="resMatricula"></div>
+                      </div>
+                      <div class="m-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" placeholder="Introdueix la marca">
+                        <div id="resMarca"></div>
+                      </div>
+                      <div class="m-3">
+                          <label for="color" class="form-label">Color</label>
+                          <input type="text" class="form-control" id="color" placeholder="Introdueix el seu color">
+                          <div id="resColor"></div>
+                      </div>
+                      </div> 
+                      <button id="btncar" type="button" class="m-3 btn btn-primary" onclick="return createCar()">Crea el teu cotxe</button>
+                  </form>
+                  <div id="resp">
+                        
+                  </div>
+          
+                    <form id="formWheels" style="display: none;">
+                      <div class="d-flex flex-row flex-wrap">
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca1" class="form-label">Marca roda 1</label>
+                            <input type="text" class="form-control" id="marca1" placeholder="Introdueix la marca">
+                            <div id="resMar1"></div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre1" class="form-label">Diametre roda 1</label>
+                            <input type="number" class="form-control" id="diametre1" placeholder="Introdueix diametre"  step="0.01" min="0" max="4">
+                            <div id="resDia1"></div>
+  
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca2" class="form-label">Marca roda 2</label>
+                            <input type="text" class="form-control" id="marca2" placeholder="Introdueix la marca">
+                            <div id="resMar2"></div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre2" class="form-label">Diametre roda 2</label>
+                            <input type="number" class="form-control" id="diametre2" placeholder="Introdueix diametre" step="0.01" min="0" max="4">
+                            <div id="resDia2"></div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca3" class="form-label">Marca roda 3</label>
+                            <input type="text" class="form-control" id="marca3" placeholder="Introdueix la marca">
+                            <div id="resMar3"></div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre3" class="form-label">Diametre roda 3</label>
+                            <input type="number" class="form-control" id="diametre3" placeholder="Introdueix diametre" step="0.01" min="0" max="4">
+                            <div id="resDia3"></div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca4" class="form-label">Marca roda 4</label>
+                            <input type="text" class="form-control" id="marca4" placeholder="Introdueix la marca">
+                            <div id="resMar4"></div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre4" class="form-label">Diametre roda 4</label>
+                            <input type="number" class="form-control" id="diametre4" placeholder="Introdueix diametre" step="0.01" min="0" max="4">
+                            <div id="resDia4"></div>
+                          </div>
+                        </div> 
+                      </div>
+                        <button type="button" class="m-3 btn btn-primary" onclick="return addWheels()" formnovalidate>Afegeix les rodes</button>
+                    </form>
+                    <div id="resp">
+                      
+                    </div>
+              </div>
+          </div>
+      </div>
+      <script>
+    
+      </script>
+      
+      <script src="../models/car.js"></script>
+      <script src="../models/wheel.js"></script>
+      <script src="../controllers/controller.js"></script>
+    
+  </body>
+</html>
+
+
