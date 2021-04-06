@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!--Vinculem amb CDN Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <!--Vinculem amb jquery validation-->
+    
+    <link href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js">
+    <link href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js">
+    
+    <!--Vinculem amb fontawesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    
+    <!--Vinculem fulla d'estils-->
+    <link rel="stylesheet" href="../styles/style.css">
+    
+    </head>
+    <body class="h-100">
+      <div class="container h-100">
+          <div class="row justify-content-center h-100">
+              <div class="col-10 align-self-center">
+                  <h2 class="text-center" id="maintitle">Construeix el teu cotxe</h2>
+                  <form id="carForm" class="needs-validation" novalidate>
+                    <div class="d-flex flex-row">
+                      <div class="m-3">
+                        <label for="matricula" class="form-label">Matricula</label>
+                        <input type="text" class="form-control" id="matricula" placeholder="Introdueix la matrícula" pattern="^\d{4}[a-zA-Z]{3}?$" required>
+                        <div class="invalid-feedback">
+                          Introdueix la teva matricula.
+                        </div>
+                        <div class="valid-feedback">
+                          OK, matricula correcte.
+                        </div>
+                        </div>
+                      <div class="m-3">
+                        <label for="marca" class="form-label">Marca</label>
+                        <input type="text" class="form-control" id="marca" placeholder="Introdueix la marca" required>
+                          <div class="invalid-feedback">
+                            Introdueix la marca del teu cotxe.
+                          </div>
+                          <div class="valid-feedback">
+                            OK, marca correcte.
+                          </div>
+                        </div>
+                        
+                      <div class="m-3">
+                          <label for="color" class="form-label">Color</label>
+                          <input type="text" class="form-control" id="color" placeholder="Introdueix el seu color" required>
+                          <div class="invalid-feedback">
+                            Introdueix el color del teu cotxe.
+                          </div>
+                          <div class="valid-feedback">
+                            OK, color correcte.
+                          </div>
+                        </div>
+                      </div> 
+                      <button id="btncar" type="submit" class="m-3 btn btn-primary">Crea el teu cotxe</button>
+                  </form>
+                  <div id="resp">
+                        
+                  </div>
+          
+                  <form id="formWheels" style="display: none;" class="needs-validation" novalidate>
+                    <div class="d-flex flex-row flex-wrap">
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca1" class="form-label">Marca roda 1</label>
+                            <input type="text" class="form-control" id="marca1" placeholder="Introdueix la marca" required>
+                            <div class="invalid-feedback">
+                              Introdueix la maca de la roda.
+                            </div>
+                            <div class="valid-feedback">
+                              OK, marca correcte.
+                            </div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre1" class="form-label">Diametre roda 1</label>
+                            <input type="number" class="form-control" id="diametre1" placeholder="Introdueix diametre"  step="0.01" min="0.4" max="2" required>
+                            <div class="invalid-feedback">
+                              Introdueix la mida de la roda. Valors compresos entre 0.4 i 2 mm 
+                            </div>
+                            <div class="valid-feedback">
+                              OK, mida correcte.
+                            </div>
+                           </div>
+                          </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca2" class="form-label">Marca roda 2</label>
+                            <input type="text" class="form-control" id="marca2" placeholder="Introdueix la marca" required>
+                            <div class="invalid-feedback">
+                              Introdueix la maca de la roda.
+                            </div>
+                            <div class="valid-feedback">
+                              OK, marca correcte.
+                            </div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre2" class="form-label">Diametre roda 2</label>
+                            <input type="number" class="form-control" id="diametre2" placeholder="Introdueix diametre" step="0.01" min="0.4" max="2" required>
+                            <div class="invalid-feedback">
+                              Introdueix la mida de la roda. Valors compresos entre 0.4 i 2 mm 
+                            </div>
+                            <div class="valid-feedback">
+                              OK, mida correcte.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca3" class="form-label">Marca roda 3</label>
+                            <input type="text" class="form-control" id="marca3" placeholder="Introdueix la marca" required>
+                            <div class="invalid-feedback">
+                              Introdueix la maca de la roda.
+                            </div>
+                            <div class="valid-feedback">
+                              OK, marca correcte.
+                            </div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre3" class="form-label">Diametre roda 3</label>
+                            <input type="number" class="form-control" id="diametre3" placeholder="Introdueix diametre" step="0.01" min="0.4" max="2" required>
+                            <div class="invalid-feedback">
+                              Introdueix la mida de la roda. Valors compresos entre 0.4 i 2 mm 
+                            </div>
+                            <div class="valid-feedback">
+                              OK, mida correcte.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="m-3">
+                            <label for="marca4" class="form-label">Marca roda 4</label>
+                            <input type="text" class="form-control" id="marca4" placeholder="Introdueix la marca" required>
+                            <div class="invalid-feedback">
+                              Introdueix la maca de la roda.
+                            </div>
+                            <div class="valid-feedback">
+                              OK, marca correcte.
+                            </div>
+                          </div>
+                          <div class="m-3">
+                            <label for="diametre4" class="form-label">Diametre roda 4</label>
+                            <input type="number" class="form-control" id="diametre4" placeholder="Introdueix diametre" step="0.01" min="0.4" max="2" required>
+                            <div class="invalid-feedback">
+                              Introdueix la mida de la roda. Valors compresos entre 0.4 i 2 mm 
+                            </div>
+                            <div class="valid-feedback">
+                              OK, mida correcte.
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                        <button type="submit" class="m-3 btn btn-primary"  formnovalidate>Afegeix les rodes</button>
+                    </form>
+                    <div id="resp">
+                      
+                    </div>
+              </div>
+          </div>
+      </div>
+      <script>
+        (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      let btnSubmit = document.getElementById('btnSubmit');
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+          if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+         
+        }, false);
+      });
+    }, false);
+  })();
+      </script>
+      
+      <script src="../models/car.js"></script>
+      <script src="../models/wheel.js"></script>
+      <script src="../controllers/controller.js"></script>
+    
+  </body>
+</html>
+
+
