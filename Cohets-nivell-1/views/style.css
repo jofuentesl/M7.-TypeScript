@@ -1,0 +1,24 @@
+#anima3 {
+    margin-bottom: 15px;
+}
+
+.progress__block {
+    margin-top: 15px;
+    margin-bottom:15px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.progress {
+    width: 250px;
+    margin:0 15px;
+}
+
+#power3__block {
+    display:none;
+}
+
+#power6__block {
+    display:none;
+}
